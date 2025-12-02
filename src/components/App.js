@@ -11,6 +11,8 @@ const App = () => {
     {id:3,task:"Deploy the React app",completed:false}
   ])
 
+  console.log(todos)
+
   function handleComplete(id){
     setTodos(todos.map(todo => 
       todo.id == id ? {...todo, completed: true} : todo)
