@@ -23,6 +23,7 @@ const App = () => {
     <div>
         {/* Do not remove the main div */}
         <h1>Parent Component</h1>
+        
         <TodoList todos={todos} setTodos={setTodos} handleComplete={handleComplete} />
     </div>
   )
