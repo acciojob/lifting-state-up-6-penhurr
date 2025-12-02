@@ -8,25 +8,19 @@ const TodoList = ({ todos, setTodos, handleComplete }) => {
 
         <div>
             <h2>Child Component</h2>
+            <ul>
             {todos.map(todo =>
             (
-
-                <ul key={todo.id}>
-                    <li>
-                        <span>{todo.task}</span>
+                    <li key={todo.id}>
+                        {todo.task}
                         {!todo.completed && <button type="button" onClick={() => handleComplete(todo.id)}>
                             Complete
                         </button>}
 
                     </li>
 
-                </ul>
-
-
-
-            )
-
-            )}
+            ))}
+            </ul>
         </div>
 
     )

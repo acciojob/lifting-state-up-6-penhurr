@@ -14,8 +14,7 @@ const App = () => {
   console.log(todos)
 
   function handleComplete(id){
-    setTodos(prevTodos => 
-      prevTodos.map(todo => 
+    setTodos(todos.map(todo => 
       todo.id == id ? {...todo, completed: true} : todo)
     )
   }
