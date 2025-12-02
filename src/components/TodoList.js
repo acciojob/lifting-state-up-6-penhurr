@@ -13,10 +13,11 @@ const TodoList = ({ todos, setTodos, handleComplete }) => {
                 <div key={todo.id}>
                     <ul>
                         <li>{todo.task}</li>
-                    </ul>
-                    {!todo.completed && <button type="button" onClick={() => handleComplete(todo.id)}>
+                        {!todo.completed && <button type="button" onClick={() => handleComplete(todo.id)}>
                         Complete
                     </button>}
+                    </ul>
+                    
 
                 </div>
             )
