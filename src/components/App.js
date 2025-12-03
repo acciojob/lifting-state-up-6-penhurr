@@ -11,7 +11,7 @@ const App = () => {
     { id: 3, task: "Deploy the React app", completed: false }
   ])
 
-  console.log(todos)
+  // console.log(todos)
 
   function handleComplete(id) {
     setTodos(todos.map(todo =>
@@ -24,15 +24,15 @@ const App = () => {
       {/* Do not remove the main div */}
       <h1>Parent Component</h1>
       <h2>Child Component</h2>
-      <ul>
+      
         {todos.map(todo=>
-          <li>
+          
             <TodoList key={todo.id} todo={todo} handleComplete={handleComplete} />
             
-          </li>
+          
           
         )}
-      </ul>
+      
         
         
       
