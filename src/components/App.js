@@ -23,10 +23,18 @@ const App = () => {
     <div>
       {/* Do not remove the main div */}
       <h1>Parent Component</h1>
-      <div>
-        <h2>Child Component</h2>
-        <TodoList todos={todos} handleComplete={handleComplete} />
-      </div>
+      <h2>Child Component</h2>
+      <ul>
+        {todos.map(todo=>
+          <li>
+            <TodoList key={todo.id} todo={todo} handleComplete={handleComplete} />
+          </li>
+          
+        )}
+      </ul>
+        
+        
+      
 
     </div>
   )
