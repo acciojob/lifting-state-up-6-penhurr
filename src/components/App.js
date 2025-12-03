@@ -24,9 +24,9 @@ const App = () => {
       <h2>Child Component</h2>
       <ul>
         {todos.map(todo=>
-          <li key={todo.id}>
-            <TodoList  todo={todo} handleComplete={handleComplete} />
-          </li>  
+          
+            <TodoList key={todo.id} todo={todo} handleComplete={handleComplete} />
+          
         )}
       </ul>
     </div>
