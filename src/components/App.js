@@ -28,6 +28,12 @@ const App = () => {
         {todos.map(todo=>
           <li>
             <TodoList key={todo.id} todo={todo} handleComplete={handleComplete} />
+            {
+                !todo.completed && 
+                <button type="button" onClick={()=>handleComplete(todo.id)}>
+                    complete
+                </button>
+            }
           </li>
           
         )}
