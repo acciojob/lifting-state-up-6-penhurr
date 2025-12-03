@@ -1,13 +1,13 @@
 import React from "react";
 
-const TodoList = ({ todos, setTodos, handleComplete }) => {
+const TodoList = ({ todos, handleComplete }) => {
 
 
 
     return (
 
-        <div>
-            <h2>Child Component</h2>
+        
+            
             <ul>
             {todos.map(todo =>
             (
@@ -21,7 +21,7 @@ const TodoList = ({ todos, setTodos, handleComplete }) => {
 
             ))}
             </ul>
-        </div>
+        
 
     )
 

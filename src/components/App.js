@@ -6,7 +6,9 @@ import TodoList from "./TodoList";
 const App = () => {
 
   const [todos, setTodos] = useState([
-    {id:1,task:"Learn React",completed:false}
+    {id:1,task:"Learn React",completed:false},
+    {id:2,task:"Build a React app",completed:false},
+    {id:3,task:"Deploy the React app",completed:false}
   ])
 
   console.log(todos)
@@ -21,8 +23,8 @@ const App = () => {
     <div>
         {/* Do not remove the main div */}
         <h1>Parent Component</h1>
-        
-        <TodoList todos={todos} setTodos={setTodos} handleComplete={handleComplete} />
+        <h2>Child Component</h2>
+        <TodoList todos={todos} handleComplete={handleComplete} />
     </div>
   )
 }
