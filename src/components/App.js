@@ -15,20 +15,21 @@ const App = () => {
     setTodos(todos.map(todo =>
       todo.id == id ? { ...todo, completed: true } : todo)
     )
+    
+    
   }
+
+  console.log(todos);
 
   return (
     <div>
       {/* Do not remove the main div */}
       <h1>Parent Component</h1>
-      <h2>Child Component</h2>
-      <ul>
-        {todos.map(todo=>
+      
           
-            <TodoList key={todo.id} todo={todo} handleComplete={handleComplete} />
+            <TodoList todos={todos} handleComplete={handleComplete} />
           
-        )}
-      </ul>
+        
     </div>
   )
 }
